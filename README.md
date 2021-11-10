@@ -1,4 +1,4 @@
-## NYPL-MockServer
+## NYPL-Mock-Server
 
    Receives and responds to SCSB requests
    
