@@ -16,7 +16,11 @@
       - spring.datasource.username=
       - spring.datasource.password=
       - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
-
+   
+2. Update the below Property Values in scsb_properteis_t table. 
+   
+      - UPDATE `recap`.`scsb_properties_t` SET `P_VALUE`='http://${DOCKERIPOFNYPLMOCKSERVER}:9102/rest' WHERE `P_KEY`='ils.rest.data.api' AND `INSTITUTION_CODE`='NYPL';
+   
 ## Build
 
 Download the Project , navigate inside project folder and build the project using below command
