@@ -11,11 +11,11 @@
 
 1. **external-rest-application.properties**
     
-      spring.datasource.url=
-      spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-      spring.datasource.username=
-      spring.datasource.password=
-      spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+      - spring.datasource.url=
+      - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+      - spring.datasource.username=
+      - spring.datasource.password=
+      - spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
 ## Build
 
