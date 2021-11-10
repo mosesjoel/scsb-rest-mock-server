@@ -6,7 +6,7 @@
 
       - Java 11
       - Docker 19.03.13  
-      
+    
 ## Prerequisite
 
 1. **external-rest-application.properties**
