@@ -19,6 +19,6 @@ public interface RequestService {
      NYPLHoldResponse nyplHoldItem(String trackingId);
      NYPLHoldResponse nyplHoldRequest(NYPLHoldRequest nyplHoldRequest);
      CreateHoldResponse createHoldItem(CreateHoldRequest createHoldRequest);
-     ItemInformationResponse findItemByItemId(String itemIdentifier);
+     ItemResponse findItemByItemId(String itemIdentifier);
      PatronInformationResponse findPatronByPatronId(String patronIdentifier);
 }

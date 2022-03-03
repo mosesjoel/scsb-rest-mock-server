@@ -284,7 +284,7 @@ public class RequestServiceImpl implements RequestService {
         }
         return patronInformationResponse;
     }
-    @Override
+/*    @Override
     public ItemInformationResponse findItemByItemId(String itemIdentifier) {
         ItemInformationResponse itemInformationResponse = new ItemInformationResponse();
         try {
@@ -312,7 +312,36 @@ public class RequestServiceImpl implements RequestService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return itemInformationResponse;
+        return itemInformationResponse;*/
+
+    //}
+
+    @Override
+    public ItemResponse findItemByItemId(String itemIdentifier) {
+        ItemResponse itemReponse = new ItemResponse();
+        ItemData itemData = new ItemData();
+        try {
+            Item item = itemRepository.findByItemIdentifier(itemIdentifier);
+            if(item!=null) {
+                List<String>bibIds = new ArrayList<>();
+                bibIds.add("test");
+                itemData.setBarcode(item.getItemIdentifier());
+                itemData.setBibIds(bibIds);
+                itemData.setCallNumber(item.getPrineLine());
+                itemData.setItemType(item.getFeeType());
+                itemData.setNyplSource(item.getItemIdentifier());
+                itemData.setUpdatedDate("12/04/2021");
+                itemData.setCreatedDate("12/06/2021");
+                itemData.setDeletedDate(item.getRecalDate());
+                itemData.setDeleted(false);
+
+            }
+            itemReponse.setItemData(itemData);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return itemReponse;
     }
 
     private String DateFormat(){
