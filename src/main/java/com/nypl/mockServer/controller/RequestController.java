@@ -79,16 +79,16 @@ public class RequestController {
         return  new ResponseEntity<CreateHoldResponse>(createHoldResponse, new HttpHeaders(), HttpStatus.OK);
     }
 
-  @PostMapping("/items/test/{itemIdentifier}")
-    public ResponseEntity<ItemInformationResponse> lookupItem(@RequestParam String itemIdentifier){
-        ItemInformationResponse itemInformationResponse = requestService.findItemByItemId(itemIdentifier);
-        return new ResponseEntity<ItemInformationResponse>(itemInformationResponse,new HttpHeaders(),HttpStatus.OK);
-  }
-  @GetMapping("/patrons")
+    @GetMapping("/items/test/{itemIdentifier}")
+    public ResponseEntity<ItemResponse> lookupItem(@PathVariable String itemIdentifier){
+        ItemResponse itemResponse = requestService.findItemByItemId(itemIdentifier);
+        return new ResponseEntity<ItemResponse>(itemResponse,new HttpHeaders(),HttpStatus.OK);
+    }
+    @GetMapping("/patrons")
     public  ResponseEntity<PatronInformationResponse> lookupPatron(@RequestParam("barcode") String patronIdentifier){
         PatronInformationResponse patronInformationResponse=requestService.findPatronByPatronId(patronIdentifier);
         return new ResponseEntity<PatronInformationResponse>(patronInformationResponse,new HttpHeaders(),HttpStatus.OK);
-  }
+    }
   /*  @PostMapping("/recap/cancel-hold-requests")
     public ResponseEntity<CancelHoldResponse> cancelHoldItem(@RequestBody CancelHoldRequest cancelHoldRequest){
         CancelHoldResponse cancelHoldResponse = requestService.cancelHold(cancelHoldRequest);
