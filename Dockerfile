@@ -4,6 +4,7 @@ FROM phase4-scsb-base:latest
 
 MAINTAINER HTC ReCAP Support "recap-support@htcindia.com"
 RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y maven
 ARG TAG
 ENV envTag="$TAG"
 ENV TERM=xterm
