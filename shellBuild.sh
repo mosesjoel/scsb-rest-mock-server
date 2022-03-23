@@ -1,7 +1,7 @@
 
 echo "Parameter = $1"
-PROJ_NAME="Phase4-NYPL-MockServer"
-PROJ_DIR="/opt/Phase4-NYPL-MockServer"
+PROJ_NAME="scsb-rest-mock-server"
+PROJ_DIR="/opt/scsb-rest-mock-server"
 PROJ_DIR_TAG=""
 VAR_SLASH="/"
 
